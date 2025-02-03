@@ -1,0 +1,269 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+    
+}
+
+html, body{
+    height:100%;
+    width:100%;
+    font-family: "Mulish", serif;
+
+}
+
+.tab.current-tab {
+    background-color:rgba(219, 226, 239, 0.418);
+    /* width: 7rem; */
+    
+    text-align: center;
+    border-radius: 4px;
+}
+
+.wraper{
+    width: 100%;
+    height: 100vh;
+    
+    background-image:url("./assets/sky.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* transform: translateZ(-50%); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items:center ;
+}
+h1{
+    /* text-align: center; */
+    color: rgba(4, 4, 4, 0.575);
+    margin: 2rem;
+}
+.tab{
+    padding: 2px 6px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.Tab-container{
+    width: 100%;
+    max-width: 850px; /* Prevents content from being too wide */
+    margin: 0 auto; /* Centers the content */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.parameter-container{
+    display: flex;
+   align-items: center; 
+    gap: 1rem;
+}
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+.parameter{
+    width: 150px ;
+    height:150px ;
+    background-color: rgba(219, 226, 239, 0.418);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+.grant-location-container{
+    display: none;
+   
+    /* padding-top: 3rem; */
+}
+.grant-location-container p:first-of-type{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+.grant-location-container p:last-of-type{
+    font-weight: 600;
+    color: white;
+}
+.btn{
+    font-size: 1rem;
+    text-transform:uppercase ;
+    font-weight: 600;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(219, 226, 239, 0.799);
+    cursor: pointer;
+}
+
+.grant-location-container.active{
+    
+    display:flex;
+}
+
+.form-container{
+    display: none;
+    flex-direction: row;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    border: none;
+    all: unset;
+    background-color: rgba(219, 226, 239, 0.503);
+    width: 500px;
+    padding: 2px 10px;
+    height: 24px;
+    border-radius: 20px;
+}
+.form-container input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+/* orm-container input:focus{
+    outline: 3px solid rgba(22, 22, 23, 0.503);
+}.f */
+
+.loading-container{
+    display: none;
+}
+.loading-container p:first-of-type{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    /* text-align: center; */
+}
+.loading-container.active{
+    display: flex;
+}
+.user-info-container{
+    display: none;
+  
+}
+.weather-container{
+    /* padding-top: 3rem; */
+    width: 100%;
+    max-width: 550px;
+    margin-top:3rem ;
+}
+
+
+.user-info-container.active{
+    display:flex;
+}
+.weather-img{
+    
+        width: 20%;
+        height: 20%;
+        object-fit: contain;
+    
+}
+.weather-desc{
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+.weather-temp{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+.name img{
+    width: 35px;
+    height: 30px;
+}
+
+.btn2{
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    border-radius: 100%;
+    padding: 0;
+}
+
+@media (max-width:900px){
+    .Tab-container{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+@media (max-width:450px){
+    body,html{
+        overflow-x: hidden;
+        overflow-y:scroll ;
+    }
+    .parameter{
+            width: 100px ;
+            height:100px ;
+            padding: 5px;
+            background-color: rgba(219, 226, 239, 0.418);
+            gap:2px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            
+    }
+    .parameter img{
+        width:30px ;
+        height:30px ;
+    }
+    .parameter-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .weather-container{
+        /* margin-top:6px ; */
+    }
+    .btn2{
+        width: 40px;
+        height: 20px;
+    }
+    .btn2 img{
+        width: 15px;
+        height: 15px;
+    } 
+    .grant-location-container{
+        padding: 2rem;
+    }
+    .grant-location-container p:first-of-type{
+        font-size: 1.5rem;
+    }
+    .user-info-container{
+        gap: 3px;
+    }
+}
