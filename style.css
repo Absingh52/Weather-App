@@ -37,7 +37,7 @@ html, body{
 }
 h1{
     /* text-align: center; */
-    color: rgba(4, 4, 4, 0.575);
+    color:white;
     margin: 2rem;
 }
 .tab{
